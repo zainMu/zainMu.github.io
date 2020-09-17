@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>My first website</title>
+</head>
+<body>
+    <div class="main">
+
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <div class="navLinks">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/mobil.png" alt="The phone image" class="mobile">
+            <div class="mobile-title">
+                <h2>Xiaomi Redmi K30 Pro</h2>
+            </div>
+
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/camera.png" alt="">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>Lorem ipsum, dolor</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/processor.png" alt="">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Lorem ipsum dolor sit</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/battery.png" alt="">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/display.png" alt="">
+                    <div>
+                        <h1>Display</h1>
+                        <p>Super AMOLED capacitive touchscreen Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, expedita!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="controls">
+            <img src="images/arrow.png" id="up">
+            <h3>Features</h3>
+            <img src="images/arrow.png" id="down">
+        </div>
+
+    </div>
+    
+
+
+    <script>
+        var circle = document.getElementById("circle")
+        var up = document.getElementById("up")
+        var down = document.getElementById("down")
+        var rotatevalue = circle.style.transform;
+        var rotatesum;
+        up.onclick = function(){
+            rotatesum = rotatevalue + "rotate(-90deg)";
+            circle.style.transform = rotatesum;
+            rotatevalue = rotatesum;
+        } 
+        down.onclick = function(){
+            rotatesum = rotatevalue + "rotate(90deg)";
+            circle.style.transform = rotatesum;
+            rotatevalue = rotatesum;
+        }
+    </script>
+</body>
+</html>
